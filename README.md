@@ -1,81 +1,81 @@
-IntelliChat - OpenAI Assistant
-==============================
+# 🤖 IntelliChat - OpenAI Assistant
 
-IntelliChat is an AI-powered chatbot application built with the MERN stack. Chat with an OpenAI-powered assistant, manage chat history, and enjoy a responsive user interface.
+IntelliChat is an **AI-powered chatbot** application built with the **MERN stack (MongoDB, Express, React, Node.js)**. It allows users to chat with an OpenAI-powered assistant, manage chat history, and enjoy a clean, responsive interface.
 
-Features
---------
-- AI chatbot powered by OpenAI API
-- User authentication (Signup/Login)
-- Store and view chat history
-- Clear chat history functionality
-- Fully responsive frontend with Material-UI
-- Clean and modern UI
+## ✨ Features
 
-Project Structure
------------------
-IntelliChat-OpenAI-Assistant/
-  frontend/        # React + Vite frontend
-  backend/         # Node.js + Express backend
-  .gitignore
-  README.md
+💬 AI chatbot powered by OpenAI API  
+🔐 User authentication (Signup/Login)  
+📝 Store and view chat history  
+🧹 Clear chat history functionality  
+📱 Fully responsive frontend with Material-UI  
+🎨 Clean and modern UI  
 
-Getting Started
----------------
+## 📂 Project Structure
 
-1. Clone the repository
-   git clone https://github.com/shravvan12/IntelliChat-OpenAI-Assistant.git
-   cd IntelliChat-OpenAI-Assistant
+IntelliChat-OpenAI-Assistant/  
+  frontend/       ⚛️ React + Vite frontend  
+  backend/        🖥️ Node.js + Express backend  
+  .gitignore  
+  README.md  
 
-2. Install dependencies
+## ⚙️ Getting Started
 
-   # Frontend
-   cd frontend
-   npm install
+1️⃣ Clone the repository  
+git clone https://github.com/shravvan12/IntelliChat-OpenAI-Assistant.git  
+cd IntelliChat-OpenAI-Assistant  
 
-   # Backend
-   cd ../backend
-   npm install
+2️⃣ Install dependencies  
 
-3. Setup environment variables
+Frontend  
+cd frontend  
+npm install  
 
-   Backend `.env` file:
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   OPENAI_API_KEY=your_openai_api_key
+Backend  
+cd ../backend  
+npm install  
 
-   Frontend `.env` file:
-   VITE_API_URL=http://localhost:5000
+3️⃣ Setup environment variables  
 
-4. Run the application
+Backend .env file:  
+PORT=5000  
+MONGO_URI=your_mongodb_connection_string  
+JWT_SECRET=your_jwt_secret  
+OPENAI_API_KEY=your_openai_api_key  
 
-   # Backend
-   cd backend
-   npm run dev
+Frontend .env file:  
+VITE_API_URL=http://localhost:5000  
 
-   # Frontend
-   cd ../frontend
-   npm run dev
+4️⃣ Run the application  
 
-5. Open in Browser
-   - Frontend: http://localhost:5173
-   - Backend API: http://localhost:5000
+Backend  
+cd backend  
+npm run dev  
 
-Usage
------
-1. Signup or login
-2. Type your message in the chat input
-3. Press Enter to send the message
-4. Click Clear Chat to remove chat history
-5. Your conversation will persist until cleared
+Frontend  
+cd ../frontend  
+npm run dev  
 
-Tech Stack
-----------
-- Frontend: React, Vite, Material-UI
-- Backend: Node.js, Express.js
-- Database: MongoDB
-- Authentication: JWT, bcrypt
-- AI: OpenAI API
+5️⃣ Open in Browser  
+🌍 Frontend: http://localhost:5173  
+🔗 Backend API: http://localhost:5000  
 
+## 🚀 Usage
 
+👤 Signup or login  
+⌨️ Type your message in the chat input  
+📤 Press Enter to send the message  
+🧹 Click Clear Chat to remove chat history  
+💾 Conversations persist until cleared  
+
+## 🛠️ Tech Stack
+
+🎨 Frontend: React, Vite, Material-UI  
+⚙️ Backend: Node.js, Express.js  
+🗄️ Database: MongoDB  
+🔑 Authentication: JWT, bcrypt  
+🤖 AI: OpenAI API  
+
+## 🔗 Repository
+
+GitHub: https://github.com/shravvan12/IntelliChat-OpenAI-Assistant  
