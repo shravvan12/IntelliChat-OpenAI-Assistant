@@ -1,9 +1,8 @@
-import { Box, useMediaQuery, useTheme } from '@mui/material'
+import { Box } from '@mui/material'
 import TypingAnim from '../components/typer/TypingAnim';
 import Footer from '../components/Footer/Footer';
 
 const Home = () => {
-  const theme = useTheme();
   return (
   <Box width={'100%'} height={'100%'} display={'flex'} mx={'auto'}>
     <Box sx={{display:'flex',width:'100%', flexDirection:"column",
