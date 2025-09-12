@@ -38,6 +38,8 @@ export const userSignup = async (
             httpOnly:true ,
             signed:true,
             path :"/",
+            sameSite: "none",
+            secure: true,
         });
 
         const token = createToken(user._id.toString() , user.email);
@@ -47,7 +49,9 @@ export const userSignup = async (
             path:"/", 
             expires,
             httpOnly:true,
-            signed: true
+            signed: true,
+            sameSite: "none",   // allow cross-site cookie
+            secure: true 
         });
 
         return res.status(201).json({message:"ok", name: user.name, email: user.email});
@@ -78,6 +82,8 @@ export const userLogin = async (
             httpOnly:true ,
             signed:true,
             path :"/",
+            sameSite: "none",
+            secure: true,
         });
 
         const token = createToken(user._id.toString() , user.email);
@@ -87,7 +93,10 @@ export const userLogin = async (
             path:"/", 
             expires,
             httpOnly:true,
-            signed: true});
+            signed: true,
+            sameSite: "none",
+            secure: true,
+        });
 
         return res.status(201).json({message:"ok", name: user.name, email: user.email });
     } catch (error) {
