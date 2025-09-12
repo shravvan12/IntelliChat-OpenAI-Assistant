@@ -30,7 +30,6 @@ export const generateChatCompletion = async (
             chats : user.chats
         });
         } catch (error) {
-            console.log(error);
             return res.status(500).json({message: "Internal Server Error", cause: error.message});
         }
     };
@@ -45,7 +44,6 @@ export const generateChatCompletion = async (
             if(!user){
                 return res.status(401).send("user not registered or token Malfunctioned");
             }
-            console.log(user._id.toString() , res.locals.jwtData.id);
             if(user._id.toString() !== res.locals.jwtData.id){
                 return res.status(401).send("Permission Denied");
     
@@ -67,7 +65,6 @@ export const generateChatCompletion = async (
             if(!user){
                 return res.status(401).send("user not registered or token Malfunctioned");
             }
-            console.log(user._id.toString() , res.locals.jwtData.id);
             if(user._id.toString() !== res.locals.jwtData.id){
                 return res.status(401).send("Permission Denied");
     

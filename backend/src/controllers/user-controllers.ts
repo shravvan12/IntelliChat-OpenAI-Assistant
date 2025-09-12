@@ -36,7 +36,6 @@ export const userSignup = async (
         //create token and store cookie
         res.clearCookie(COOKIE_NAME,{
             httpOnly:true ,
-            domain:"localhost" , 
             signed:true,
             path :"/",
         });
@@ -46,7 +45,6 @@ export const userSignup = async (
         expires.setDate(expires.getDate()+7);
         res.cookie(COOKIE_NAME,token,{
             path:"/", 
-            domain:"localhost" , 
             expires,
             httpOnly:true,
             signed: true
@@ -88,7 +86,6 @@ export const userLogin = async (
         expires.setDate(expires.getDate()+7);
         res.cookie(COOKIE_NAME,token,{
             path:"/", 
-            domain:"localhost" , 
             expires,
             httpOnly:true,
             signed: true});
@@ -112,10 +109,8 @@ export const VerifyUser = async (
         if(!user){
             return res.status(401).send("user not registered or token Malfunctioned");
         }
-        console.log(user._id.toString() , res.locals.jwtData.id);
         if(user._id.toString() !== res.locals.jwtData.id){
             return res.status(401).send("Permission Denied");
-
         }
         return res.status(200).json({message:"ok", name: user.name, email: user.email });
     } catch (error) {
@@ -135,13 +130,11 @@ export const userLogout = async (
         if(!user){
             return res.status(401).send("user not registered or token Malfunctioned");
         }
-        console.log(user._id.toString() , res.locals.jwtData.id);
         if(user._id.toString() !== res.locals.jwtData.id){
             return res.status(401).send("Permission Denied");
         }
         res.clearCookie(COOKIE_NAME,{
             httpOnly:true ,
-            domain:"localhost" ,
             signed:true,
             path :"/",
         });
