@@ -76,7 +76,6 @@ export const userLogin = async (
 
         res.clearCookie(COOKIE_NAME,{
             httpOnly:true ,
-            domain:"localhost" , 
             signed:true,
             path :"/",
         });
