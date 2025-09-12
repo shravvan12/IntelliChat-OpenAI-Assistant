@@ -145,6 +145,8 @@ export const userLogout = async (
             httpOnly:true ,
             signed:true,
             path :"/",
+            sameSite: "none",
+            secure: true
         });
         return res.status(200).json({message:"ok", name: user.name, email: user.email });
     } catch (error) {
