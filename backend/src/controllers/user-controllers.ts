@@ -35,9 +35,9 @@ export const userSignup = async (
         await user.save();
         //create token and store cookie
         res.clearCookie(COOKIE_NAME,{
-            httpOnly:true ,
-            signed:true,
-            path :"/",
+            path: "/",
+            httpOnly: true,
+            signed: true,
             sameSite: "none",
             secure: true,
         });
@@ -141,13 +141,13 @@ export const userLogout = async (
         if(user._id.toString() !== res.locals.jwtData.id){
             return res.status(401).send("Permission Denied");
         }
-        res.clearCookie(COOKIE_NAME,{
-            httpOnly:true ,
-            signed:true,
-            path :"/",
-            sameSite: "none",
-            secure: true
-        });
+        res.clearCookie(COOKIE_NAME, {
+        path: "/",
+        httpOnly: true,
+        signed: true,
+        sameSite: "none",
+        secure: true,
+        })
         return res.status(200).json({message:"ok", name: user.name, email: user.email });
     } catch (error) {
         console.log(error);
